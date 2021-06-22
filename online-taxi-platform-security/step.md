@@ -1,0 +1,1 @@
+keytool -import -v -trustcacerts -keypass 111111 -alias slserver -file D:\gzy20111108.cer -keystore D:\gzyserver.jks -storepass 123456 

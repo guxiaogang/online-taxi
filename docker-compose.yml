@@ -1,0 +1,13 @@
+version: '2'
+services:
+  mysql:
+    restart: always
+    image: mysql:5.7
+    container_name: mono_mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=4321qwer"
+      - "MYSQL_DATABASE=online-taxi"
+      - "TZ=Asia/Shanghai"
+    ports:
+      - 3306:3306
+    command: --character-set-server=utf8

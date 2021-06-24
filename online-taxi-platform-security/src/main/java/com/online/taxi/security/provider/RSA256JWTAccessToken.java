@@ -35,7 +35,7 @@ public class RSA256JWTAccessToken extends JWTAccessToken {
     RSA256JWTAccessToken(UserDetailsService userDetailsService) {
         super(userDetailsService);
         KeyStoreKeyFactory keyStoreKeyFactory = new KeyStoreKeyFactory(new ClassPathResource("rsa.jks"), "123456".toCharArray());
-        setKeyPair(keyStoreKeyFactory.getKeyPair("fenix-bookstore-rsa"));
+        setKeyPair(keyStoreKeyFactory.getKeyPair("online-taxi-rsa"));
     }
 
     /**

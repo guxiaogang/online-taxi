@@ -16,7 +16,7 @@
  *        https://github.com/fenixsoft
  */
 
-package com.online.taxi.infrastructure.security;
+package com.online.taxi.security.provider;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;

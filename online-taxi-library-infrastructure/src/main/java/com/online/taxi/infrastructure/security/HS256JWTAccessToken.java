@@ -2,8 +2,6 @@ package com.online.taxi.infrastructure.security;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
 
-import javax.inject.Named;
-
 /**
  * 基于HMAC-SHA256的JWT令牌实现
  * <p>

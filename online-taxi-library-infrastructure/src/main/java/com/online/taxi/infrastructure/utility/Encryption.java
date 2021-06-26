@@ -19,18 +19,16 @@
 package com.online.taxi.infrastructure.utility;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
 
-import javax.inject.Named;
 import java.util.Optional;
 
 /**
  * 默认的加密工具
  *
  **/
-@Named
+@Component
 public class Encryption {
 
     @Autowired

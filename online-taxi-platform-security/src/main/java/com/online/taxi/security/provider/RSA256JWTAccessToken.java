@@ -1,7 +1,6 @@
 package com.online.taxi.security.provider;
 
-import com.online.taxi.infrastructure.security.JWTAccessToken;
-import com.online.taxi.infrastructure.security.RSA256PublicJWTAccessToken;
+
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -12,9 +11,9 @@ import org.springframework.security.oauth2.common.util.JsonParser;
 import org.springframework.security.oauth2.common.util.JsonParserFactory;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.rsa.crypto.KeyStoreKeyFactory;
+import org.springframework.stereotype.Component;
 import org.springframework.util.ReflectionUtils;
 
-import javax.inject.Named;
 import java.lang.reflect.Field;
 import java.util.Collections;
 import java.util.Map;
@@ -22,11 +21,11 @@ import java.util.Map;
 /**
  * 使用RSA SHA256私钥加密的JWT令牌
  * <p>
- * 在Infrastructure工程中提供了{@link RSA256PublicJWTAccessToken}作为公钥验证用途。
+ * 在Infrastructure工程中提供了{@link }作为公钥验证用途。
  * 为了便于对比，
  *
  **/
-@Named
+@Component
 @Primary
 public class RSA256JWTAccessToken extends JWTAccessToken {
 

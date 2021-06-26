@@ -21,21 +21,18 @@ package com.online.taxi.domain.security;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-
-import javax.inject.Inject;
-import javax.inject.Named;
-import java.util.Optional;
+import org.springframework.stereotype.Component;
 
 /**
  * 认证用户信息查询服务
  * <p>
  * {@link UserDetailsService}接口定义了从外部（数据库、LDAP，任何地方）根据用户名查询到
  */
-@Named
+@Component
 public class AuthenticAccountDetailsService implements UserDetailsService {
 
-    @Inject
-    private AuthenticAccountRepository accountRepository;
+//    @Autowired
+//    private AuthenticAccountRepository accountRepository;
 
     /**
      * 根据用户名查询用户角色、权限等信息
@@ -43,7 +40,8 @@ public class AuthenticAccountDetailsService implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return Optional.ofNullable(accountRepository.findByUsername(username)).orElseThrow(() -> new UsernameNotFoundException("未找到该用户:" + username));
+//        return Optional.ofNullable(accountRepository.findByUsername(username)).orElseThrow(() -> new UsernameNotFoundException("未找到该用户:" + username));
+        return null;
     }
 
 }

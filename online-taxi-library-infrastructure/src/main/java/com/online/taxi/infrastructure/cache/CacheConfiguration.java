@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * 为系统提供一些代码上使用的缓存
  *
  **/
-@Configuration
+//@Configuration
 public class CacheConfiguration {
 
     /**

@@ -16,7 +16,7 @@
  *        https://github.com/fenixsoft
  */
 
-package com.online.taxi.infrastructure.security;
+package com.online.taxi.security.provider;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -28,6 +28,7 @@ import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.security.oauth2.provider.token.DefaultAccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.DefaultUserAuthenticationConverter;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,6 +46,7 @@ import java.util.Map;
  * 继承此类，在加入自己定义的负载信息即可使用。一般来说负载中至少要告知服务端当前用户是谁，但又不应存放过多信息导致HTTP Header过大，尤其不应存放敏感信息。
  *
  */
+@Component
 public class JWTAccessToken extends JwtAccessTokenConverter {
 
 

@@ -19,11 +19,11 @@
 package com.online.taxi.party.domain.validation;
 
 import com.online.taxi.domain.party.Account;
-import com.online.taxi.party.domain.repo.AccountRepository;
 import com.online.taxi.domain.security.AuthenticAccount;
+import com.online.taxi.party.domain.repo.AccountRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 
-import javax.inject.Inject;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.lang.annotation.Annotation;
@@ -40,7 +40,7 @@ import java.util.function.Predicate;
  **/
 public class AccountValidation<T extends Annotation> implements ConstraintValidator<T, Account> {
 
-    @Inject
+    @Autowired
     protected AccountRepository repository;
 
     protected Predicate<Account> predicate = c -> true;

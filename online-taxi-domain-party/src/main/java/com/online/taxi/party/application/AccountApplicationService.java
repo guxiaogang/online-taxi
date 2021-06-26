@@ -19,25 +19,25 @@
 package com.online.taxi.party.application;
 
 import com.online.taxi.domain.party.Account;
-import com.online.taxi.party.domain.repo.AccountRepository;
 import com.online.taxi.infrastructure.utility.Encryption;
+import com.online.taxi.party.domain.repo.AccountRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
-import javax.inject.Inject;
-import javax.inject.Named;
 import javax.transaction.Transactional;
 
 /**
  * 用户资源的应用服务接口
  *
  **/
-@Named
+@Service
 @Transactional
 public class AccountApplicationService {
 
-    @Inject
+    @Autowired
     private AccountRepository repository;
 
-    @Inject
+    @Autowired
     private Encryption encoder;
 
     public void createAccount(Account account) {

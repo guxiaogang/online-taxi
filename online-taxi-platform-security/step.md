@@ -24,4 +24,5 @@ http://localhost:8301/oauth/authorize?client_id=browser&response_type=token&scop
 #### Password
 http://localhost:8301/oauth/token?client_id=browser&client_secret=secret&grant_type=password&username=test&password=test
 
-#### Password
+#### Client Credentials
+http://localhost:8301/oauth/token?client_id=browser&client_secret=secret&grant_type=client_credentials

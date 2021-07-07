@@ -1,5 +1,5 @@
 INSERT INTO oauth_client_details VALUES ('c1', 'party','$2a$10$mI2kOKV7SkoDKn6nNWLJuOQaQ52iXGogE5OAis2qpQ9g6q7JDvizK', 'all,ROLE_ADMIN,ROLE_USER,ROLE_API','client_credentials,password,authorization_code,implicit,refresh_token', 'http://www.baidu.com', NULL, 7200, 259200, NULL, now(), 0, 0, 'false');
 INSERT INTO oauth_client_details VALUES ('c2', 'party', '$2a$10$mI2kOKV7SkoDKn6nNWLJuOQaQ52iXGogE5OAis2qpQ9g6q7JDvizK', 'all,ROLE_API', 'client_credentials,password,authorization_code,implicit,refresh_token', 'http://www.baidu.com',  NULL, 31536000, 2592000, NULL, now(), 0, 0, 'false');
-INSERT INTO oauth_client_details VALUES ('browser', 'party', '$2a$10$mI2kOKV7SkoDKn6nNWLJuOQaQ52iXGogE5OAis2qpQ9g6q7JDvizK', 'all,ROLE_API', 'client_credentials,password,authorization_code,implicit,refresh_token', 'http://www.baidu.com',  NULL, 31536000, 2592000, NULL, now(), 0, 0, 'false');
+INSERT INTO oauth_client_details VALUES ('browser', 'party,oauth2-resource', '$2a$10$mI2kOKV7SkoDKn6nNWLJuOQaQ52iXGogE5OAis2qpQ9g6q7JDvizK', 'all,ROLE_API,BROWSER', 'client_credentials,password,authorization_code,implicit,refresh_token', 'http://www.baidu.com',  NULL, 31536000, 2592000, NULL, now(), 0, 0, 'false');
 
 INSERT INTO account VALUES (1, 'test', '$2a$10$a/FVgzs7ngUca0mDp3.sY.fU5bGPj2N2JM5daJToKh7eGumy0WKhi', 'Tester', '', '18888888888','test@gmail.com', '唐家湾港湾大道科技一路3号远光软件股份有限公司');

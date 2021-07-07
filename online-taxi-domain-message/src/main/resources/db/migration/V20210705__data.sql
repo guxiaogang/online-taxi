@@ -1,0 +1,1 @@
+INSERT INTO tbl_sms_template (id, template_id, content, create_time, update_time) VALUES (1, 'SMS_144145499', 'The SMS verification code is: {code}', '2021-07-06 16:18:23', '2021-07-06 16:18:23');

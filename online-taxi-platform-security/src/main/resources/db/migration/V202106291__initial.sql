@@ -1,4 +1,3 @@
-DROP TABLE IF EXISTS oauth_client_details;
 CREATE TABLE oauth_client_details
 (
   client_id               varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '客户端标识',
@@ -18,7 +17,6 @@ CREATE TABLE oauth_client_details
   PRIMARY KEY (client_id) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '接入客户端信息' ROW_FORMAT = Dynamic;
 
-DROP TABLE IF EXISTS oauth_code;
 CREATE TABLE oauth_code
 (
   create_time    timestamp(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -27,37 +25,32 @@ CREATE TABLE oauth_code
   INDEX          code_index(code) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
-DROP TABLE IF EXISTS role_table;
 CREATE TABLE role_table
 (
-  id             INTEGER  NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  role_code      varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+  id        INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  role_code varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
-DROP TABLE IF EXISTS user_role;
 CREATE TABLE user_role
 (
-  user_id             INTEGER  NOT NULL,
-  role_id             INTEGER  NOT NULL
+  user_id INTEGER NOT NULL,
+  role_id INTEGER NOT NULL
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
-DROP TABLE IF EXISTS permission;
 CREATE TABLE permission
 (
-  id             INTEGER  NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  code           varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  description    varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  url            varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
+  id          INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  code        varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  description varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+  url         varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
-DROP TABLE IF EXISTS role_permission;
 CREATE TABLE role_permission
 (
-  role_id             INTEGER  NOT NULL,
-  permission_id       INTEGER  NOT NULL
+  role_id       INTEGER NOT NULL,
+  permission_id INTEGER NOT NULL
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Compact;
 
-DROP TABLE IF EXISTS account;
 
 CREATE TABLE IF NOT EXISTS account
 (

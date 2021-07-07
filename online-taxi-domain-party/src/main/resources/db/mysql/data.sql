@@ -1,3 +1,0 @@
--- INSERT INTO account
--- VALUES (1, 'test', '$2a$10$a/FVgzs7ngUca0mDp3.sY.fU5bGPj2N2JM5daJToKh7eGumy0WKhi', 'Tester', '', '18888888888',
---         'test@gmail.com', '唐家湾港湾大道科技一路3号远光软件股份有限公司');

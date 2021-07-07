@@ -4,10 +4,11 @@ services:
     restart: always
     image: mysql:5.7
     container_name: mono_mysql
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    volumes:
+        - ./database:/docker-entrypoint-initdb.d
     environment:
-      - "MYSQL_ROOT_PASSWORD=4321qwer"
-      - "MYSQL_DATABASE=online-taxi"
+      - "MYSQL_ROOT_PASSWORD=4321"
       - "TZ=Asia/Shanghai"
     ports:
       - 3306:3306
-    command: --character-set-server=utf8

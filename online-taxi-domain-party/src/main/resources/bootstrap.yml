@@ -14,19 +14,13 @@ eureka:
     serviceUrl:
       defaultZone: http://${REGISTRY_HOST:localhost}:${REGISTRY_PORT:8761}/eureka/
 
-database: mysql
-
 spring:
   application:
     name: party
   datasource:
-    url: "jdbc:mysql://localhost:3306/online-taxi?useUnicode=true&characterEncoding=utf-8"
+    url: "jdbc:mysql://localhost:3306/party?useUnicode=true&characterEncoding=utf-8"
     username: "root"
-    password: "4321qwer"
-    initialization-mode: embedded
-    schema: "classpath:db/${database}/schema.sql"
-    data: "classpath:db/${database}/data.sql"
-    sql-script-encoding: UTF-8
+    password: "4321"
   jpa:
     show-sql: false
     hibernate:
@@ -39,19 +33,6 @@ spring:
     cache:
       period: 86400
 
-#security:
-#  oauth2:
-#    client:
-#      # OAuth的ClientID和ClientSecret是写在OAuthClientDetailsService中的
-#      # 实际生产中要考虑好如何获取验证服务器的Endpoint、动态增加微服务客户端、如何分发客户端密钥等问题，而在演示工程中并不关注这些
-#      clientId: account
-#      clientSecret: account
-#      accessTokenUri: http://${AUTH_HOST:localhost}:${AUTH_PORT:8301}/oauth/token
-#      grant-type: client_credentials
-#      scope: SERVICE
-#    resource:
-#      userInfoUri: BUGFIX
-
 
 logging:
   pattern:
@@ -62,3 +43,7 @@ logging:
 server:
   port: ${PORT:8401}
 
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:mapper/*.xml

@@ -9,7 +9,7 @@ spring:
   datasource:
     url: "jdbc:mysql://localhost:3306/online-taxi?useUnicode=true&characterEncoding=utf-8"
     username: "root"
-    password: "4321qwer"
+    password: "4321"
     initialization-mode: embedded
     schema: "classpath:db/${database}/schema.sql"
     data: "classpath:db/${database}/data.sql"

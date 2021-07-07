@@ -16,20 +16,16 @@ eureka:
 server:
   port: ${PORT:8301}
 
-database: mysql
-
 spring:
   application:
     name: security
   main:
     allow-bean-definition-overriding: true
   datasource:
-    url: "jdbc:mysql://localhost:3306/online-taxi?useUnicode=true&characterEncoding=utf-8"
+    url: "jdbc:mysql://localhost:3306/security?useUnicode=true&characterEncoding=utf-8"
     username: "root"
-    password: "4321qwer"
-    initialization-mode: always
-    schema: "classpath:db/${database}/schema.sql"
-    data: "classpath:db/${database}/data.sql"
+    password: "4321"
+
 
 logging:
   pattern:

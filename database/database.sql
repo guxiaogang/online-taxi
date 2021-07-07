@@ -1,0 +1,11 @@
+# create databases
+CREATE DATABASE IF NOT EXISTS `security`;
+CREATE DATABASE IF NOT EXISTS `party`;
+CREATE DATABASE IF NOT EXISTS `valuation`;
+CREATE DATABASE IF NOT EXISTS `message`;
+CREATE DATABASE IF NOT EXISTS `order`;
+CREATE DATABASE IF NOT EXISTS `wallet`;
+
+# create root user and grant rights
+CREATE USER 'root'@'localhost' IDENTIFIED BY '4321';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';

@@ -1,0 +1,28 @@
+#spring:
+#  application:
+#    name: party
+#  cloud:
+#    config:
+#      uri: http://${CONFIG_HOST:localhost}:${CONFIG_PORT:8888}
+#      fail-fast: true
+#      password: ${CONFIG_PASS:dev}
+#      username: user
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${REGISTRY_HOST:localhost}:${REGISTRY_PORT:8761}/eureka/
+
+spring:
+  application:
+    name: passenger-api
+
+logging:
+  pattern:
+    console: "%clr(%d{HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(-){faint} %clr([%t]){faint} %clr(%-40logger{39}){cyan}[%line]%clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
+  level:
+    root: INFO
+
+server:
+  port: ${PORT:8501}
